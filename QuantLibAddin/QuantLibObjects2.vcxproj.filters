@@ -73,6 +73,9 @@
     <Filter Include="credit">
       <UniqueIdentifier>{ccd99a6d-175e-4f4f-b645-0842651abc04}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ForeignExchange">
+      <UniqueIdentifier>{491b888c-2ca4-4b9d-9e8e-35195ab916c7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="qlo\enumerations\register\register_all.cpp">
@@ -848,6 +851,60 @@
     </ClCompile>
     <ClCompile Include="qlo\calibrationhelpers.cpp">
       <Filter>ShortRateModels</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\money.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_money.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_money.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_money.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\forwardexchangerate.cpp" />
+    <ClCompile Include="qlo\foreignexchangeforward.cpp">
+      <Filter>Instruments</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\exchangerate.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_exchangerate.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_foreignexchangeforward.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_forwardexchangerate.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_exchangerate.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_foreignexchangeforward.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_forwardexchangerate.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_exchangerate.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_foreignexchangeforward.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_forwardexchangerate.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\interpolatedfxfwdpointstructure.cpp">
+      <Filter>ForeignExchange</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_interpolatedfxfwdpointstructure.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_interpolatedfxfwdpointstructure.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_interpolatedfxfwdpointstructure.cpp">
+      <Filter>serialization\create</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1747,6 +1804,60 @@
     </ClInclude>
     <ClInclude Include="qlo\calibrationhelpers.hpp">
       <Filter>ShortRateModels</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\money.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_money.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_money.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_money.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\foreignexchangeforward.hpp">
+      <Filter>Instruments</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\forwardexchangerate.hpp" />
+    <ClInclude Include="qlo\exchangerate.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_exchangerate.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_foreignexchangeforward.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_forwardexchangerate.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_exchangerate.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_foreignexchangeforward.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_forwardexchangerate.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_exchangerate.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_foreignexchangeforward.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_forwardexchangerate.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\interpolatedfxfwdpointstructure.hpp">
+      <Filter>ForeignExchange</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_interpolatedfxfwdpointstructure.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_interpolatedfxfwdpointstructure.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_interpolatedfxfwdpointstructure.hpp">
+      <Filter>serialization\create</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

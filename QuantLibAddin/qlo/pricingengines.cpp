@@ -5,6 +5,7 @@
  Copyright (C) 2007 Eric Ehlers
  Copyright (C) 2015 Paolo Mazzocchi
  Copyright (C) 2016 Stefano Fondi
+ Copyright (C) 2021 Nicolai Lassesen
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -34,26 +35,27 @@
 #include <ql/pricingengines/swaption/jamshidianswaptionengine.hpp>
 #include <ql/pricingengines/swaption/treeswaptionengine.hpp>
 #include <ql/pricingengines/swaption/g2swaptionengine.hpp>
+#include <ql/pricingengines/fx/forwardpointsengine.hpp>
 
 namespace QuantLibAddin {
 
     // PricingEngines - without timesteps
     PricingEngine::PricingEngine(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-            const std::string& engineID,
-            const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess>& process,
-            bool permanent) : ObjectHandler::LibraryObject<QuantLib::PricingEngine>(properties, permanent)
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const std::string& engineID,
+        const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess>& process,
+        bool permanent) : ObjectHandler::LibraryObject<QuantLib::PricingEngine>(properties, permanent)
     {
         libraryObject_ = ObjectHandler::createPricingEngine(engineID, process);
     }
 
     // PricingEngines - with timesteps
     PricingEngine::PricingEngine(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-            const std::string& engineID,
-            const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess>& process,
-            const long& timeSteps,
-            bool permanent) : ObjectHandler::LibraryObject<QuantLib::PricingEngine>(properties, permanent)
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const std::string& engineID,
+        const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess>& process,
+        const long& timeSteps,
+        bool permanent) : ObjectHandler::LibraryObject<QuantLib::PricingEngine>(properties, permanent)
     {
         libraryObject_ = ObjectHandler::createPricingEngine(engineID, process, timeSteps);
     }
@@ -68,7 +70,7 @@ namespace QuantLibAddin {
     {
         libraryObject_ = boost::shared_ptr<QuantLib::PricingEngine>(new
             QuantLib::DiscountingSwapEngine(hYTS, includeSettlementDateFlows,
-                                            settlementDate, npvDate));
+                settlementDate, npvDate));
     }
 
     BlackSwaptionEngine::BlackSwaptionEngine(
@@ -113,7 +115,7 @@ namespace QuantLibAddin {
         bool permanent) : PricingEngine(properties, permanent)
     {
         libraryObject_ = boost::shared_ptr<QuantLib::PricingEngine>(new
-			QuantLib::BlackCapFloorEngine(hYTS, vol, displacement));
+            QuantLib::BlackCapFloorEngine(hYTS, vol, displacement));
     }
 
     BachelierCapFloorEngine::BachelierCapFloorEngine(
@@ -157,7 +159,7 @@ namespace QuantLibAddin {
         : ObjectHandler::LibraryObject<QuantLib::BlackCalculator>(properties, permanent) {
         libraryObject_ = boost::shared_ptr<QuantLib::BlackCalculator>(new
             QuantLib::BlackCalculator(optionType, strike,
-                                      forward, stdDev, discount));
+                forward, stdDev, discount));
     }
 
     BlackCalculator::BlackCalculator(
@@ -170,42 +172,42 @@ namespace QuantLibAddin {
         : ObjectHandler::LibraryObject<QuantLib::BlackCalculator>(properties, permanent) {
         libraryObject_ = boost::shared_ptr<QuantLib::BlackCalculator>(new
             QuantLib::BlackCalculator(payoff,
-                                      forward, stdDev, discount));
+                forward, stdDev, discount));
     }
 
     BlackScholesCalculator::BlackScholesCalculator(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-            QuantLib::Option::Type optionType,
-            QuantLib::Real strike,
-            QuantLib::Real spot,
-            QuantLib::DiscountFactor growth,
-            QuantLib::Real stdDev,
-            QuantLib::DiscountFactor discount,
-            bool permanent) : BlackCalculator(properties, permanent)
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        QuantLib::Option::Type optionType,
+        QuantLib::Real strike,
+        QuantLib::Real spot,
+        QuantLib::DiscountFactor growth,
+        QuantLib::Real stdDev,
+        QuantLib::DiscountFactor discount,
+        bool permanent) : BlackCalculator(properties, permanent)
     {
         libraryObject_ = boost::shared_ptr<QuantLib::BlackCalculator>(new
             QuantLib::BlackScholesCalculator(optionType, strike,
-                                             spot, growth, stdDev, discount));
+                spot, growth, stdDev, discount));
     }
 
     BlackScholesCalculator::BlackScholesCalculator(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-            const boost::shared_ptr<QuantLib::StrikedTypePayoff>& payoff,
-            QuantLib::Real spot,
-            QuantLib::DiscountFactor growth,
-            QuantLib::Real stdDev,
-            QuantLib::DiscountFactor discount,
-            bool permanent) : BlackCalculator(properties, permanent)
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const boost::shared_ptr<QuantLib::StrikedTypePayoff>& payoff,
+        QuantLib::Real spot,
+        QuantLib::DiscountFactor growth,
+        QuantLib::Real stdDev,
+        QuantLib::DiscountFactor discount,
+        bool permanent) : BlackCalculator(properties, permanent)
     {
         libraryObject_ = boost::shared_ptr<QuantLib::BlackCalculator>(new
             QuantLib::BlackScholesCalculator(payoff,
-                                             spot, growth, stdDev, discount));
+                spot, growth, stdDev, discount));
     }
 
     BondEngine::BondEngine(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-            const QuantLib::Handle<QuantLib::YieldTermStructure>& discountCurve,
-            bool permanent) : PricingEngine(properties, permanent)
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const QuantLib::Handle<QuantLib::YieldTermStructure>& discountCurve,
+        bool permanent) : PricingEngine(properties, permanent)
     {
         libraryObject_ = boost::shared_ptr<QuantLib::PricingEngine>(new
             QuantLib::DiscountingBondEngine(discountCurve));
@@ -241,6 +243,19 @@ namespace QuantLibAddin {
     {
         libraryObject_ = boost::shared_ptr<QuantLib::PricingEngine>(new
             QuantLib::G2SwaptionEngine(model, range, intervals));
+    }
+
+    FxForwardPointsEngine::FxForwardPointsEngine(
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const boost::shared_ptr<QuantLib::ExchangeRate>& spotExchangeRate,
+        const QuantLib::Handle<QuantLib::FxForwardPointTermStructure>& forwardPointsCurve,
+        const QuantLib::Handle<QuantLib::YieldTermStructure>& baseDiscountCurve,
+        const QuantLib::Handle<QuantLib::YieldTermStructure>& termDiscountCurve,
+        bool permanent) : PricingEngine(properties, permanent)
+    {
+        libraryObject_ = boost::shared_ptr<QuantLib::PricingEngine>(new
+            QuantLib::ForwardPointsEngine(*spotExchangeRate,
+                forwardPointsCurve, baseDiscountCurve, termDiscountCurve));
     }
 
 }

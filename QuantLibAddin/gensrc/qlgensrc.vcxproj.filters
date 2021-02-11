@@ -327,5 +327,20 @@
     <Xml Include="metadata\functions\calibrationhelpers.xml">
       <Filter>functions</Filter>
     </Xml>
+    <Xml Include="metadata\functions\money.xml">
+      <Filter>functions</Filter>
+    </Xml>
+    <Xml Include="metadata\functions\foreignexchangeforward.xml">
+      <Filter>functions</Filter>
+    </Xml>
+    <Xml Include="metadata\functions\exchangerate.xml">
+      <Filter>functions</Filter>
+    </Xml>
+    <Xml Include="metadata\functions\forwardexchangerate.xml">
+      <Filter>functions</Filter>
+    </Xml>
+    <Xml Include="metadata\functions\interpolatedfxfwdpointstructure.xml">
+      <Filter>functions</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

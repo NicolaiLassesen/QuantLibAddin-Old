@@ -1,0 +1,129 @@
+<Category name='exchangerate'>
+  <description>functions to construct and use ExchangeRate objects</description>
+  <displayName>ExchangeRate</displayName>
+  <xlFunctionWizardCategory>QuantLib - Financial</xlFunctionWizardCategory>
+  <includes>
+    <include>qlo/exchangerate.hpp</include>
+  </includes>
+  <copyright>
+    Copyright (C) 2021 Nicolai Lassesen
+  </copyright>
+
+  <Functions>
+
+    <Constructor name='qlExchangeRate'>
+      <libraryFunction>ExchangeRate</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='BaseCurrency' exampleValue='EUR'>
+            <type>QuantLib::Currency</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Base Currency</description>
+          </Parameter>
+          <Parameter name='QuoteCurrency' exampleValue='USD'>
+            <type>QuantLib::Currency</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Quote Currency</description>
+          </Parameter>
+          <Parameter name='Rate' exampleValue='0.89'>
+            <type>QuantLib::Real</type>
+            <tensorRank>scalar</tensorRank>
+            <description>The amount of quote currency to pay for one unit of base currency</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+    
+    <Member name='qlExchangeRateBaseCcy' type='QuantLib::ExchangeRate'>
+      <description>Returns the base currency for the given ExchangeRate object.</description>
+      <libraryFunction>source</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Currency</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlExchangeRateQuoteCcy' type='QuantLib::ExchangeRate'>
+      <description>Returns the quote currency for the given ExchangeRate object.</description>
+      <libraryFunction>target</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Currency</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlExchangeRateValue' type='QuantLib::ExchangeRate'>
+      <description>Returns the amount of quote currency to pay for one unit of base currency.</description>
+      <libraryFunction>rate</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlExchangeRateType' type='QuantLib::ExchangeRate'>
+      <description>Returns the type of the exchange rate (direct or derived).</description>
+      <libraryFunction>type</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::ExchangeRate::Type</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <!--<Member name='qlExchangeRateConvert' type='QuantLib::ExchangeRate'>
+      <description>Convert a money amount in one currency into a money amount into the other currency.</description>
+      <libraryFunction>exchange</libraryFunction>
+      <SupportedPlatforms>
+        --><!--SupportedPlatform name='Excel' calcInWizard='false'/--><!--
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Amount'>
+            <type>QuantLib::Money</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>id of existing QuantLib::Money object.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Money</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>-->
+
+  </Functions>
+
+</Category>

@@ -1,0 +1,69 @@
+<Category name='money'>
+  <description>functions to construct and use Money objects</description>
+  <displayName>Money</displayName>
+  <xlFunctionWizardCategory>QuantLib - Financial</xlFunctionWizardCategory>
+  <includes>
+    <include>qlo/money.hpp</include>
+  </includes>
+  <copyright>
+    Copyright (C) 2021 Nicolai Lassesen
+  </copyright>
+
+  <Functions>
+
+    <Constructor name='qlMoney'>
+      <libraryFunction>Money</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Currency'>
+            <type>QuantLib::Currency</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Currency denomination of the amount</description>
+          </Parameter>
+          <Parameter name='Value' exampleValue='1000000'>
+            <type>QuantLib::Real</type>
+            <tensorRank>scalar</tensorRank>
+            <description>The currency value</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Member name='qlMoneyCurrency' type='QuantLib::Money'>
+      <description>Returns currency for the given Money object.</description>
+      <libraryFunction>currency</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Currency</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlMoneyValue' type='QuantLib::Money'>
+      <description>Returns value for the given Money object.</description>
+      <libraryFunction>value</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+  </Functions>
+
+</Category>

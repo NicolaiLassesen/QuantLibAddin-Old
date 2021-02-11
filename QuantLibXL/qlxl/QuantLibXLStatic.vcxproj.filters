@@ -416,6 +416,36 @@
     <ClCompile Include="register\register_calibrationhelpers.cpp">
       <Filter>register</Filter>
     </ClCompile>
+    <ClCompile Include="register\register_money.cpp">
+      <Filter>register</Filter>
+    </ClCompile>
+    <ClCompile Include="functions\money.cpp">
+      <Filter>functions</Filter>
+    </ClCompile>
+    <ClCompile Include="register\register_foreignExchangeForward.cpp">
+      <Filter>register</Filter>
+    </ClCompile>
+    <ClCompile Include="functions\foreignExchangeForward.cpp">
+      <Filter>functions</Filter>
+    </ClCompile>
+    <ClCompile Include="functions\forwardexchangerate.cpp">
+      <Filter>functions</Filter>
+    </ClCompile>
+    <ClCompile Include="functions\exchangerate.cpp">
+      <Filter>functions</Filter>
+    </ClCompile>
+    <ClCompile Include="register\register_exchangerate.cpp">
+      <Filter>register</Filter>
+    </ClCompile>
+    <ClCompile Include="register\register_forwardexchangerate.cpp">
+      <Filter>register</Filter>
+    </ClCompile>
+    <ClCompile Include="register\register_interpolatedfxfwdpointstructure.cpp">
+      <Filter>register</Filter>
+    </ClCompile>
+    <ClCompile Include="functions\interpolatedfxfwdpointstructure.cpp">
+      <Filter>functions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="register\register_all.hpp">

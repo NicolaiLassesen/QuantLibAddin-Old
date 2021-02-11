@@ -7,6 +7,7 @@
 #include <qlo/interpolation2D.hpp>
 #include <qlo/ratehelpers.hpp>
 #include <qlo/piecewiseyieldcurve.hpp>
+#include <qlo/interpolatedfxfwdpointstructure.hpp>
 #include <qlo/indexes/swapindex.hpp>
 
 #include <ql/cashflows/cashflows.hpp>
@@ -18,6 +19,7 @@
 #include <ql/instruments/barrieroption.hpp>
 #include <ql/instruments/capfloor.hpp>
 #include <ql/instruments/forward.hpp>
+#include <ql/instruments/foreignexchangeforward.hpp>
 #include <ql/instruments/overnightindexedswap.hpp>
 #include <ql/instruments/swaption.hpp>
 #include <ql/math/interpolations/cubicinterpolation.hpp>

@@ -1,0 +1,25 @@
+** Building QuantLibXL **
+
+Prerequisites:
+    * QuantLib source code
+    * QuantLib
+
+QuantLibXL resides in the QuantLibAddin\QuantLibXL folder. Build either of the solutions in that directory
+
+1. Make sure QuantLib builds
+2. Make sure solution (eg. QuantLibXL_full.sln) loads correctly - may need to be corrected to have correct relative path to QuantLib directory
+3. Make sure the boost directory path is in the additional include directories of projects: ohxllib, QuantLibObjects, and QuantLibXLStatic
+4. Make sure the QuantLib directory is in correct relative path for the additional include directories of projects: QuantLibObjects and QuantLibXLStatic
+5. The projects apr, aprutil, log4cxx, and xlsdk should build without any trouble
+6. Make sure that ohgensrc and qlgensrc builds correctly, i.e. that python.exe is in the path environment variable so that the python script in both project execute and generate required source files
+7. If source code generators were successful ohxllib should build correctly
+8. Final step is to make QuantLibObjects and QuantLibXLStatic build, and if all above succeeeded they should - if not check includes and link includes (boost, QuantLib, etc.)
+
+** Exposing additional functionality in XL **
+
+Instrument example: ForeignExchangeForward
+(following tutorial: https://www.quantlib.org/quantlibaddin/extend_tutorial.html)
+
+
+
+

@@ -40,7 +40,7 @@
     <RootNamespace>QuantLibXLStatic</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <Import Project="..\..\QuantLib\QuantLib.props" />
+  <Import Project="..\..\..\QuantLib\QuantLib.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
@@ -176,7 +176,7 @@
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..;../../ObjectHandler;../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;..;../../ObjectHandler;../../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_USRDLL;XLL_STATIC;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -199,7 +199,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-sgd-1_21_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -226,7 +226,7 @@
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..;../../ObjectHandler;../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;..;../../ObjectHandler;../../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_USRDLL;XLL_STATIC;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -249,7 +249,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-sgd-1_21_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -276,7 +276,7 @@
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..;../../ObjectHandler;../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;..;../../ObjectHandler;../../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_USRDLL;XLL_STATIC;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -299,7 +299,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-gd-1_21_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -326,7 +326,7 @@
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..;../../ObjectHandler;../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;..;../../ObjectHandler;../../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_USRDLL;XLL_STATIC;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -349,7 +349,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-gd-1_21_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -377,7 +377,7 @@
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>..;../../ObjectHandler;../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;..;../../ObjectHandler;../../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;_USRDLL;XLL_STATIC;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>false</MinimalRebuild>
@@ -400,7 +400,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-s-1_21_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
@@ -427,7 +427,7 @@
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>..;../../ObjectHandler;../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;..;../../ObjectHandler;../../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;_USRDLL;XLL_STATIC;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>false</MinimalRebuild>
@@ -450,7 +450,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-s-1_21_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
@@ -477,7 +477,7 @@
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>..;../../ObjectHandler;../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;..;../../ObjectHandler;../../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;_USRDLL;XLL_STATIC;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>false</MinimalRebuild>
@@ -500,7 +500,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\dev\boost_1_75_0\stage\lib;../../ObjectHandler/lib;../../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-1_21_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
@@ -527,7 +527,7 @@
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>..;../../ObjectHandler;../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;..;../../ObjectHandler;../../../QuantLib;../../QuantLibAddin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;_USRDLL;XLL_STATIC;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>false</MinimalRebuild>
@@ -550,7 +550,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-1_21_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
@@ -565,6 +565,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="functions\calibrationhelpers.cpp" />
+    <ClCompile Include="functions\exchangerate.cpp" />
+    <ClCompile Include="functions\foreignExchangeForward.cpp" />
+    <ClCompile Include="functions\forwardexchangerate.cpp" />
+    <ClCompile Include="functions\interpolatedfxfwdpointstructure.cpp" />
+    <ClCompile Include="functions\money.cpp" />
     <ClCompile Include="register\addin.cpp" />
     <ClCompile Include="register\register_abcd.cpp" />
     <ClCompile Include="register\register_accountingengines.cpp" />
@@ -592,17 +597,22 @@
     <ClCompile Include="register\register_defaulttermstructures.cpp" />
     <ClCompile Include="register\register_driftcalculators.cpp" />
     <ClCompile Include="register\register_evolutiondescription.cpp" />
+    <ClCompile Include="register\register_exchangerate.cpp" />
     <ClCompile Include="register\register_exercise.cpp" />
+    <ClCompile Include="register\register_foreignExchangeForward.cpp" />
+    <ClCompile Include="register\register_forwardexchangerate.cpp" />
     <ClCompile Include="register\register_forwardrateagreement.cpp" />
     <ClCompile Include="register\register_handles.cpp" />
     <ClCompile Include="register\register_index.cpp" />
     <ClCompile Include="register\register_instruments.cpp" />
+    <ClCompile Include="register\register_interpolatedfxfwdpointstructure.cpp" />
     <ClCompile Include="register\register_interpolation.cpp" />
     <ClCompile Include="register\register_latentmodels.cpp" />
     <ClCompile Include="register\register_leg.cpp" />
     <ClCompile Include="register\register_marketmodelevolvers.cpp" />
     <ClCompile Include="register\register_marketmodels.cpp" />
     <ClCompile Include="register\register_mathf.cpp" />
+    <ClCompile Include="register\register_money.cpp" />
     <ClCompile Include="register\register_optimization.cpp" />
     <ClCompile Include="register\register_options.cpp" />
     <ClCompile Include="register\register_overnightindexedswap.cpp" />
@@ -722,7 +732,7 @@
     <ProjectReference Include="..\..\QuantLibAddin\QuantLibObjects2.vcxproj">
       <Project>{cab8330c-6424-4455-9285-3654587ef71f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\QuantLib\QuantLib.vcxproj">
+    <ProjectReference Include="..\..\..\QuantLib\QuantLib.vcxproj">
       <Project>{ad0a27da-91da-46a2-acbd-296c419ed3aa}</Project>
     </ProjectReference>
   </ItemGroup>

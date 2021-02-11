@@ -1,0 +1,171 @@
+<Category name='forwardexchangerate'>
+  <description>functions to construct and use ForwardExchangeRate objects</description>
+  <displayName>ForwardExchangeRate</displayName>
+  <xlFunctionWizardCategory>QuantLib - Financial</xlFunctionWizardCategory>
+  <includes>
+    <include>qlo/exchangerate.hpp</include>
+    <include>qlo/forwardexchangerate.hpp</include>
+  </includes>
+  <copyright>
+    Copyright (C) 2021 Nicolai Lassesen
+  </copyright>
+
+  <Functions>
+
+    <Constructor name='qlForwardExchangeRate'>
+      <libraryFunction>ForwardExchangeRate</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='SpotRate'>
+            <type>QuantLib::ExchangeRate</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>Spot rate object ID</description>
+          </Parameter>
+          <Parameter name='ForwardPoints' exampleValue = '8.47'>
+            <type>QuantLib::Real</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Forward points quoted with usual 1/10000 convention</description>
+          </Parameter>
+          <Parameter name='Tenor' exampleValue='1M'>
+            <type>QuantLib::Period</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Tenor for the forward rate</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Member name='qlForwardExchangeRateBaseCcy' type='QuantLib::ForwardExchangeRate'>
+      <description>Returns the base currency for the given ForwardExchangeRate object.</description>
+      <libraryFunction>source</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Currency</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardExchangeRateQuoteCcy' type='QuantLib::ForwardExchangeRate'>
+      <description>Returns the quote currency for the given ForwardExchangeRate object.</description>
+      <libraryFunction>target</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Currency</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardExchangeRateSpotValue' type='QuantLib::ForwardExchangeRate'>
+      <description>Returns the amount of quote currency to pay for one unit of base currency in a spot transaction.</description>
+      <libraryFunction>spotRate</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+    
+    <Member name='qlForwardExchangeRateFwdPoints' type='QuantLib::ForwardExchangeRate'>
+      <description>Returns the forward points component of the forward rate, i.e. the number that should be added to the spot rate to get the all-in rate.</description>
+      <libraryFunction>forwardPoints</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardExchangeRateFwdRate' type='QuantLib::ForwardExchangeRate'>
+      <description>Returns the forward rate, i.e. the amount of quote currency to pay for one unit of base currency in a forward transaction.</description>
+      <libraryFunction>forwardRate</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardExchangeRateTenor' type='QuantLib::ForwardExchangeRate'>
+      <description>Returns the tenor of the forward rate.</description>
+      <libraryFunction>tenor</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Period</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardExchangeRateType' type='QuantLib::ForwardExchangeRate'>
+      <description>Returns the type of the forward exchange rate (direct or derived).</description>
+      <libraryFunction>type</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::ExchangeRate::Type</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <!--<Member name='qlExchangeRateConvert' type='QuantLib::ExchangeRate'>
+      <description>Convert a money amount in one currency into a money amount into the other currency.</description>
+      <libraryFunction>exchange</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Amount'>
+            <type>QuantLib::Money</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>id of existing QuantLib::Money object.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Money</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>-->
+
+  </Functions>
+
+</Category>

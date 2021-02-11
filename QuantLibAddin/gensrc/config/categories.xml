@@ -25,18 +25,23 @@
     <categoryName>defaultbasket</categoryName>
     <categoryName>defaulttermstructures</categoryName>
     <categoryName>driftcalculators</categoryName>
+    <categoryName>exchangerate</categoryName>
     <categoryName>exercise</categoryName>
     <categoryName>evolutiondescription</categoryName>
+    <categoryName>foreignexchangeforward</categoryName>
+    <categoryName>forwardexchangerate</categoryName>
     <categoryName>forwardrateagreement</categoryName>
     <categoryName>handles</categoryName>
     <categoryName>index</categoryName>
     <categoryName>instruments</categoryName>
+    <categoryName>interpolatedfxfwdpointstructure</categoryName>
     <categoryName>interpolation</categoryName>
     <categoryName>latentmodels</categoryName>
     <categoryName>leg</categoryName>
     <categoryName>marketmodels</categoryName>
     <categoryName>marketmodelevolvers</categoryName>
     <categoryName>mathf</categoryName>
+    <categoryName>money</categoryName>
     <categoryName>optimization</categoryName>
     <categoryName>options</categoryName>
     <categoryName>overnightindexedswap</categoryName>

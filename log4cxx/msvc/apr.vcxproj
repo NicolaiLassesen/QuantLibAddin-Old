@@ -39,7 +39,7 @@
     <ProjectGuid>{A5EEE6C6-C626-4F88-B0BD-551BE9C577C5}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <Import Project="..\..\QuantLib\QuantLib.props" />
+  <Import Project="..\..\..\QuantLib\QuantLib.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>

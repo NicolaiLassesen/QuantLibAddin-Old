@@ -1,0 +1,113 @@
+<Category name='foreignexchangeforward'>
+  <description>functions to construct and use ForeignExchangeForward objects</description>
+  <displayName>ForeignExchangeForward</displayName>
+  <xlFunctionWizardCategory>QuantLib - Financial</xlFunctionWizardCategory>
+  <includes>
+    <include>qlo/foreignexchangeforward.hpp</include>
+  </includes>
+  <copyright>
+    Copyright (C) 2021 Nicolai Lassesen
+  </copyright>
+
+  <Functions>
+
+    <Constructor name='qlForeignExchangeForward'>
+      <libraryFunction>ForeignExchangeForward</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='DeliveryDate'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Delivery Date: The date on which the amounts agreed in the contract must be exchanged</description>
+          </Parameter>
+          <Parameter name='BaseNotionalAmount'>
+            <type>QuantLib::Money</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>The forward notional amount in the base currency</description>
+          </Parameter>
+          <Parameter name='ContractAllInRate'>
+            <type>QuantLib::ExchangeRate</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>The contract all in rate defining also the term currency</description>
+          </Parameter>
+          <Parameter name='ForwardType'>
+            <type>QuantLib::ForeignExchangeForward::Type</type>
+            <tensorRank>scalar</tensorRank>
+            <description>The forward type defining whether base currency is sold or bought</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Member name='qlForeignExchangeForwardType' type='QuantLib::ForeignExchangeForward'>
+      <description>Returns the type for the given ForeignExchangeForward object.</description>
+      <libraryFunction>forwardType</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::ForeignExchangeForward::Type</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForeignExchangeForwardDelivery' type='QuantLib::ForeignExchangeForward'>
+      <description>Returns the delivery date for the given ForeignExchangeForward object.</description>
+      <libraryFunction>deliveryDate</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Date</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForeignExchangeForwardBaseCcy' type='QuantLib::ForeignExchangeForward'>
+      <description>Returns the base currency for the given ForeignExchangeForward object.</description>
+      <libraryFunction>baseCurrency</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Currency</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForeignExchangeForwardTermCcy' type='QuantLib::ForeignExchangeForward'>
+      <description>Returns the term currency for the given ForeignExchangeForward object.</description>
+      <libraryFunction>termCurrency</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Currency</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+  </Functions>
+
+</Category>

@@ -12,6 +12,7 @@
     Copyright (C) 2015 Riccardo Barone
     Copyright (C) 2015 Paolo Mazzocchi
     Copyright (C) 2016 Stefano Fondi
+    Copyright (C) 2021 Nicolai Lassesen
   </enumeratedTypeCopyright>
 
   <EnumeratedTypeGroups>
@@ -675,6 +676,10 @@
           <string>Act/Act</string>
           <value>QuantLib::ActualActual(QuantLib::ActualActual::ISDA)</value>
         </EnumeratedType>
+        <EnumeratedType>
+          <string>ActAct</string>
+          <value>QuantLib::ActualActual(QuantLib::ActualActual::ISDA)</value>
+        </EnumeratedType>
 
         <!-- ISDA 2000 Definition Annex Article 4 Section 4.16 (d) -->
         <EnumeratedType>
@@ -813,7 +818,6 @@
           <string>LIN ACTACT ISMA</string>
           <value>QuantLib::ActualActual(QuantLib::ActualActual::ISMA)</value>
         </EnumeratedType>
-
 
         <!-- Other? -->
         <EnumeratedType>
@@ -1651,6 +1655,21 @@
       </EnumeratedTypes>
     </EnumeratedTypeGroup>
 
+    <EnumeratedTypeGroup type='QuantLib::ForeignExchangeForward::Type'>
+      <includeFile>oh/enumerations/typefactory.hpp</includeFile>
+      <constructor>true</constructor>
+      <EnumeratedTypes>
+        <EnumeratedType>
+          <string>SellBaseBuyTermForward</string>
+          <value>QuantLib::ForeignExchangeForward::Type::SellBaseBuyTermForward</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>BuyBaseSellTermForward</string>
+          <value>QuantLib::ForeignExchangeForward::Type::BuyBaseSellTermForward</value>
+        </EnumeratedType>
+      </EnumeratedTypes>
+    </EnumeratedTypeGroup>
+
     <EnumeratedTypeGroup type='QuantLib::Option::Type'>
       <includeFile>oh/enumerations/typefactory.hpp</includeFile>
       <constructor>true</constructor>
@@ -1921,6 +1940,37 @@
         <EnumeratedType>
           <string>LogMixedLinearKrugerCubic</string>
           <value>QuantLibAddin::InterpolatedYieldCurve::LogMixedLinearKrugerCubic</value>
+        </EnumeratedType>
+      </EnumeratedTypes>
+    </EnumeratedTypeGroup>
+
+    <EnumeratedTypeGroup type='QuantLibAddin::InterpolatedFxForwardPointTermStructure::Interpolator'>
+      <includeFile>qlo/interpolatedfxfwdpointstructure.hpp</includeFile>
+      <constructor>true</constructor>
+      <EnumeratedTypes>
+        <EnumeratedType>
+          <string>BackwardFlat</string>
+          <value>QuantLibAddin::InterpolatedFxForwardPointTermStructure::BackwardFlat</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>ForwardFlat</string>
+          <value>QuantLibAddin::InterpolatedFxForwardPointTermStructure::ForwardFlat</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>Linear</string>
+          <value>QuantLibAddin::InterpolatedFxForwardPointTermStructure::Linear</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>LogLinear</string>
+          <value>QuantLibAddin::InterpolatedFxForwardPointTermStructure::LogLinear</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>CubicNaturalSpline</string>
+          <value>QuantLibAddin::InterpolatedFxForwardPointTermStructure::CubicNaturalSpline</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>LogCubicNaturalSpline</string>
+          <value>QuantLibAddin::InterpolatedFxForwardPointTermStructure::LogCubicNaturalSpline</value>
         </EnumeratedType>
       </EnumeratedTypes>
     </EnumeratedTypeGroup>

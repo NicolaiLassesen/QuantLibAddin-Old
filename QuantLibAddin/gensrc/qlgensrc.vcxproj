@@ -17,7 +17,7 @@
     <Keyword>MakeFileProj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <Import Project="..\..\QuantLib\QuantLib.props" />
+  <Import Project="..\..\..\QuantLib\QuantLib.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='All|Win32'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
   </PropertyGroup>
@@ -167,6 +167,11 @@
     <Xml Include="metadata\functions\calibrationhelpers.xml">
       <SubType>Designer</SubType>
     </Xml>
+    <Xml Include="metadata\functions\exchangerate.xml" />
+    <Xml Include="metadata\functions\foreignexchangeforward.xml" />
+    <Xml Include="metadata\functions\forwardexchangerate.xml" />
+    <Xml Include="metadata\functions\interpolatedfxfwdpointstructure.xml" />
+    <Xml Include="metadata\functions\money.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

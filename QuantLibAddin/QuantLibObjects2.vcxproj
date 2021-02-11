@@ -40,7 +40,7 @@
     <RootNamespace>QuantLibObjects</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <Import Project="..\QuantLib\QuantLib.props" />
+  <Import Project="..\..\QuantLib\QuantLib.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
@@ -157,7 +157,7 @@
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../ObjectHandler;../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;.;../ObjectHandler;../../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>false</MinimalRebuild>
@@ -191,7 +191,7 @@
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../ObjectHandler;../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;.;../ObjectHandler;../../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>false</MinimalRebuild>
@@ -225,7 +225,7 @@
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../ObjectHandler;../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;.;../ObjectHandler;../../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>false</MinimalRebuild>
@@ -259,7 +259,7 @@
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../ObjectHandler;../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;.;../ObjectHandler;../../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>false</MinimalRebuild>
@@ -292,7 +292,7 @@
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.;../ObjectHandler;../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;.;../ObjectHandler;../../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -325,7 +325,7 @@
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.;../ObjectHandler;../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;.;../ObjectHandler;../../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -358,7 +358,7 @@
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.;../ObjectHandler;../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;.;../ObjectHandler;../../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -391,7 +391,7 @@
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.;../ObjectHandler;../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\boost_1_75_0;.;../ObjectHandler;../../QuantLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -429,8 +429,23 @@
     <ClCompile Include="qlo\enumerations\constructors\enumeratedclasses.cpp" />
     <ClCompile Include="qlo\enumerations\constructors\enumeratedpairs.cpp" />
     <ClCompile Include="qlo\enumerations\factories\calendarfactory.cpp" />
+    <ClCompile Include="qlo\exchangerate.cpp" />
+    <ClCompile Include="qlo\foreignexchangeforward.cpp" />
+    <ClCompile Include="qlo\forwardexchangerate.cpp" />
+    <ClCompile Include="qlo\interpolatedfxfwdpointstructure.cpp" />
+    <ClCompile Include="qlo\money.cpp" />
     <ClCompile Include="qlo\serialization\create\create_calibrationhelpers.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_exchangerate.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_foreignexchangeforward.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_forwardexchangerate.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_interpolatedfxfwdpointstructure.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_money.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_calibrationhelpers.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_exchangerate.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_foreignexchangeforward.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_forwardexchangerate.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_interpolatedfxfwdpointstructure.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_money.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_abcd.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_accountingengines.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_alphaform.cpp" />
@@ -453,15 +468,20 @@
     <ClCompile Include="qlo\valueobjects\vo_defaulttermstructures.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_driftcalculators.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_evolutiondescription.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_exchangerate.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_exercise.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_foreignexchangeforward.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_forwardexchangerate.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_forwardrateagreement.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_index.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_interpolatedfxfwdpointstructure.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_interpolation.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_latentmodels.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_leg.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_marketmodelevolvers.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_marketmodels.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_mathf.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_money.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_optimization.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_options.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_overnightindexedswap.cpp" />
@@ -699,9 +719,24 @@
     <ClInclude Include="qlo\enumerations\factories\payoffsfactory.hpp" />
     <ClInclude Include="qlo\enumerations\factories\pricingenginesfactory.hpp" />
     <ClInclude Include="qlo\enumerations\factories\termstructuresfactory.hpp" />
+    <ClInclude Include="qlo\exchangerate.hpp" />
+    <ClInclude Include="qlo\foreignexchangeforward.hpp" />
+    <ClInclude Include="qlo\forwardexchangerate.hpp" />
+    <ClInclude Include="qlo\interpolatedfxfwdpointstructure.hpp" />
     <ClInclude Include="qlo\models.hpp" />
+    <ClInclude Include="qlo\money.hpp" />
     <ClInclude Include="qlo\serialization\create\create_calibrationhelpers.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_exchangerate.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_foreignexchangeforward.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_forwardexchangerate.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_interpolatedfxfwdpointstructure.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_money.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_calibrationhelpers.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_exchangerate.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_foreignexchangeforward.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_forwardexchangerate.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_interpolatedfxfwdpointstructure.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_money.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_abcd.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_accountingengines.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_all.hpp" />
@@ -725,16 +760,21 @@
     <ClInclude Include="qlo\valueobjects\vo_defaulttermstructures.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_driftcalculators.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_evolutiondescription.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_exchangerate.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_exercise.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_foreignexchangeforward.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_forwardexchangerate.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_forwardrateagreement.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_group.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_index.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_interpolatedfxfwdpointstructure.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_interpolation.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_latentmodels.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_leg.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_marketmodelevolvers.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_marketmodels.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_mathf.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_money.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_optimization.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_options.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_overnightindexedswap.hpp" />
@@ -1003,7 +1043,7 @@
     <ProjectReference Include="..\ObjectHandler\ohxl\ohxllib\ohxllib.vcxproj">
       <Project>{66021664-4359-442C-ACC7-7C82F51C9D5A}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\QuantLib\QuantLib.vcxproj">
+    <ProjectReference Include="..\..\QuantLib\QuantLib.vcxproj">
       <Project>{ad0a27da-91da-46a2-acbd-296c419ed3aa}</Project>
     </ProjectReference>
     <ProjectReference Include="gensrc\qlgensrc.vcxproj">

@@ -6,6 +6,7 @@
  Copyright (C) 2007 Eric Ehlers
  Copyright (C) 2015 Paolo Mazzocchi
  Copyright (C) 2016 Stefano Fondi
+ Copyright (C) 2021 Nicolai Lassesen
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -50,6 +51,8 @@ namespace QuantLib {
     class GeneralizedBlackScholesProcess;
     class OneFactorAffineModel;
     class G2;
+    class ExchangeRate;
+    class FxForwardPointTermStructure;
 
     template <class T>
     class Handle;
@@ -231,6 +234,17 @@ namespace QuantLibAddin {
                QuantLib::Real range,
                QuantLib::Size intervals,
                bool permanent);
+    };
+
+    class FxForwardPointsEngine : public PricingEngine {
+    public:
+        FxForwardPointsEngine(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<QuantLib::ExchangeRate>& spotExchangeRate,
+            const QuantLib::Handle<QuantLib::FxForwardPointTermStructure>& forwardPointsCurve,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& baseDiscountCurve,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& termDiscountCurve,
+            bool permanent);
     };
 }
 

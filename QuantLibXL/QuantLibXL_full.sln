@@ -1,9 +1,10 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ohgensrc", "..\ObjectHandler\gensrc\ohgensrc.vcxproj", "{88BE5568-6E55-41C5-A251-670FAFB44336}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuantLib", "..\QuantLib\QuantLib.vcxproj", "{AD0A27DA-91DA-46A2-ACBD-296C419ED3AA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuantLib", "..\..\QuantLib\QuantLib.vcxproj", "{AD0A27DA-91DA-46A2-ACBD-296C419ED3AA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlgensrc", "..\QuantLibAddin\gensrc\qlgensrc.vcxproj", "{C8A6BB98-75CA-4EB9-A750-8BA3B3AA5969}"
 EndProject
@@ -20,6 +21,11 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "aprutil", "..\log4cxx\msvc\aprutil.vcxproj", "{0082D6A9-8051-4946-888B-4E52C17BF98E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "log4cxx", "..\log4cxx\msvc\log4cxx.vcxproj", "{FA6EB34E-6BE0-46F5-AA4C-704B49BE63D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Info", "Info", "{C6E856A4-545C-492C-A097-6C01B62398D0}"
+	ProjectSection(SolutionItems) = preProject
+		..\BuildingQlXl.txt = ..\BuildingQlXl.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -238,5 +244,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A8FADF2-7704-4A17-8BDF-11ACC9BEB807}
 	EndGlobalSection
 EndGlobal

@@ -9,12 +9,14 @@
     <include>qlo/payoffs.hpp</include>
     <include>qlo/marketmodels.hpp</include>
     <include>qlo/processes.hpp</include>
+    <include>qlo/exchangerate.hpp</include>
     <include>ql/pricingengines/blackformula.hpp</include>
     <include>ql/pricingengines/blackscholescalculator.hpp</include>
     <include>ql/termstructures/volatility/optionlet/optionletvolatilitystructure.hpp</include>
     <include>ql/termstructures/volatility/swaption/swaptionvolstructure.hpp</include>
     <include>ql/pricingengines/swaption/jamshidianswaptionengine.hpp</include>
     <include>ql/pricingengines/swaption/g2swaptionengine.hpp</include>
+    <include>ql/pricingengines/fx/forwardpointsengine.hpp</include>
 
   </serializationIncludes>
   <addinIncludes>
@@ -24,18 +26,21 @@
     <include>qlo/payoffs.hpp</include>
     <include>qlo/marketmodels.hpp</include>
     <include>qlo/processes.hpp</include>
+    <include>qlo/exchangerate.hpp</include>
     <include>ql/pricingengines/blackformula.hpp</include>
     <include>ql/pricingengines/blackscholescalculator.hpp</include>
     <include>ql/termstructures/volatility/optionlet/optionletvolatilitystructure.hpp</include>
     <include>ql/termstructures/volatility/swaption/swaptionvolstructure.hpp</include>
     <include>ql/pricingengines/swaption/jamshidianswaptionengine.hpp</include>
     <include>ql/pricingengines/swaption/g2swaptionengine.hpp</include>
+    <include>ql/pricingengines/fx/forwardpointsengine.hpp</include>
 
   </addinIncludes>
   <copyright>
     Copyright (C) 2006, 2007, 2008, 2012 Ferdinando Ametrano
     Copyright (C) 2007 Eric Ehlers
     Copyright (C) 2016 Stefano Fondi
+    Copyright (C) 2021 Nicolai Lassesen
   </copyright>
   <Functions>
 
@@ -1633,5 +1638,39 @@
       </ParameterList>
     </Constructor>
 
+    <Constructor name='qlFxForwardPointsEngine'>
+      <libraryFunction>FxForwardPointsEngine</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='SpotExchangeRate' >
+            <type>QuantLib::ExchangeRate</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Spot exchange rate object ID.</description>
+          </Parameter>
+          <Parameter name='ForwardPointsCurve' >
+            <type>QuantLib::FxForwardPointTermStructure</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>Forward points curve object ID.</description>
+          </Parameter>
+          <Parameter name='BaseDiscountCurve' default='""'>
+            <type>QuantLib::YieldTermStructure</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>Base currency yield term structure object ID.</description>
+          </Parameter>
+          <Parameter name='TermDiscountCurve' default='""'>
+            <type>QuantLib::YieldTermStructure</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>Term currency yield term structure object ID.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+    
   </Functions>
 </Category>
