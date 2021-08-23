@@ -31,4 +31,32 @@ namespace QuantLibAddin {
         return forward_->termCurrency();
     }
 
+    QuantLib::Real ForeignExchangeForward::fairForwardPoints() const {
+        return forward_->fairForwardPoints();
+    }
+
+    QuantLib::Real ForeignExchangeForward::forwardNetValueBase() const {
+        return forward_->forwardNetValueBase().value();
+    }
+    
+    QuantLib::Real ForeignExchangeForward::forwardNetValueTerm() const {
+        return forward_->forwardNetValueTerm().value();
+    }
+
+    QuantLib::Real ForeignExchangeForward::presentNetValueBase() const {
+        return forward_->presentNetValueBase().value();
+    }
+
+    QuantLib::Real ForeignExchangeForward::presentNetValueTerm() const {
+        return forward_->presentNetValueTerm().value();
+    }
+
+    QuantLib::Real ForeignExchangeForward::forwardGrossValueBase() const {
+        return forward_->forwardGrossValueBase().value();
+    }
+
+    QuantLib::Real ForeignExchangeForward::forwardGrossValueTerm() const {
+        return forward_->forwardGrossValueTerm().value();
+    }
+
 }

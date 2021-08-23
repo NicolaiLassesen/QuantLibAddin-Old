@@ -25,6 +25,14 @@ namespace QuantLibAddin {
         const QuantLib::Currency& baseCurrency() const;
         const QuantLib::Currency& termCurrency() const;
 
+        QuantLib::Real fairForwardPoints() const;
+        QuantLib::Real forwardNetValueBase() const;
+        QuantLib::Real forwardNetValueTerm() const;
+        QuantLib::Real presentNetValueBase() const;
+        QuantLib::Real presentNetValueTerm() const;
+        QuantLib::Real forwardGrossValueBase() const;
+        QuantLib::Real forwardGrossValueTerm() const;
+
     private:
         boost::shared_ptr<QuantLib::ForeignExchangeForward> forward_;
     };

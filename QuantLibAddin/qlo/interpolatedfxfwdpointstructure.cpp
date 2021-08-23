@@ -27,35 +27,39 @@ namespace QuantLibAddin {
         : FxForwardPointTermStructure(properties, permanent),
         interpolatorID_(to_upper_copy(interpolatorID))
     {
+        std::vector<QuantLib::ForwardExchangeRate> fwdExchangeRates;
+        for (std::vector<boost::shared_ptr<QuantLib::ForwardExchangeRate>>::const_iterator i = fwdXRates.begin(); i != fwdXRates.end(); ++i)
+            fwdExchangeRates.push_back(**i);
+
         if (interpolatorID_ == "BACKWARDFLAT") {
             libraryObject_ = boost::shared_ptr<QuantLib::Extrapolator>(
                 new QuantLib::InterpolatedFxForwardPointTermStructure<QuantLib::BackwardFlat>(
-                    referenceDate, fwdXRates, dayCounter, calendar));
+                    referenceDate, fwdExchangeRates, dayCounter, calendar));
         }
         else if (interpolatorID_ == "FORWARDFLAT") {
             libraryObject_ = boost::shared_ptr<QuantLib::Extrapolator>(
                 new QuantLib::InterpolatedFxForwardPointTermStructure<QuantLib::ForwardFlat>(
-                    referenceDate, fwdXRates, dayCounter, calendar));
+                    referenceDate, fwdExchangeRates, dayCounter, calendar));
         }
         else if (interpolatorID_ == "LINEAR") {
             libraryObject_ = boost::shared_ptr<QuantLib::Extrapolator>(
                 new QuantLib::InterpolatedFxForwardPointTermStructure<QuantLib::Linear>(
-                    referenceDate, fwdXRates, dayCounter, calendar));
+                    referenceDate, fwdExchangeRates, dayCounter, calendar));
         }
         else if (interpolatorID_ == "LOGLINEAR") {
             libraryObject_ = boost::shared_ptr<QuantLib::Extrapolator>(
                 new QuantLib::InterpolatedFxForwardPointTermStructure<QuantLib::LogLinear>(
-                    referenceDate, fwdXRates, dayCounter, calendar));
+                    referenceDate, fwdExchangeRates, dayCounter, calendar));
         }
         else if (interpolatorID_ == "CUBICNATURALSPLINE") {
             libraryObject_ = boost::shared_ptr<QuantLib::Extrapolator>(
                 new QuantLib::InterpolatedFxForwardPointTermStructure<QuantLib::Cubic>(
-                    referenceDate, fwdXRates, dayCounter, calendar));
+                    referenceDate, fwdExchangeRates, dayCounter, calendar));
         }
         else if (interpolatorID_ == "LOGCUBICNATURALSPLINE") {
             libraryObject_ = boost::shared_ptr<QuantLib::Extrapolator>(
                 new QuantLib::InterpolatedFxForwardPointTermStructure<QuantLib::LogCubic>(
-                    referenceDate, fwdXRates, dayCounter, calendar,
+                    referenceDate, fwdExchangeRates, dayCounter, calendar,
                     QuantLib::LogCubic(QuantLib::CubicInterpolation::Spline, false,
                         QuantLib::CubicInterpolation::SecondDerivative, 0.0,
                         QuantLib::CubicInterpolation::SecondDerivative, 0.0)));
@@ -63,6 +67,7 @@ namespace QuantLibAddin {
         else
             QL_FAIL("unknown interpolatorID: " << interpolatorID_);
     }
+
 
 #define RESOLVE_TEMPLATE(NAME) \
         if (interpolatorID_=="BACKWARDFLAT") { \

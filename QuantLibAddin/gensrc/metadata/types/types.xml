@@ -239,6 +239,7 @@
     <DataType defaultSuperType='objectClass'>QuantLibAddin::CmsMarketCalibration</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::ExchangeRate</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::Extrapolator</DataType>
+    <DataType defaultSuperType='objectClass'>QuantLibAddin::ForeignExchangeForward</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::ForwardExchangeRate</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::GaussianLHPLossModel</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::Handle</DataType>

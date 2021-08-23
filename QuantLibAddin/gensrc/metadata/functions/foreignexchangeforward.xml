@@ -108,6 +108,111 @@
       </ReturnValue>
     </Member>
 
+    <Member name='qlForeignExchangeForwardFairFwdPoints' type='QuantLib::ForeignExchangeForward'>
+      <description>Returns the fair forward points for the contract. Requires pricing engine to be set before calling.</description>
+      <libraryFunction>fairForwardPoints</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForeignExchangeForwardNetForwardValueBase' type='QuantLibAddin::ForeignExchangeForward'>
+      <description>Returns the net forward value in base currency. Requires pricing engine to be set before calling.</description>
+      <libraryFunction>forwardNetValueBase</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForeignExchangeForwardNetForwardValueTerm' type='QuantLibAddin::ForeignExchangeForward'>
+      <description>Returns the net forward value in term currency. Requires pricing engine to be set before calling.</description>
+      <libraryFunction>forwardNetValueTerm</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForeignExchangeForwardNetPresentValueBase' type='QuantLibAddin::ForeignExchangeForward'>
+      <description>Returns the net present value in base currency. Requires pricing engine to be set before calling.</description>
+      <libraryFunction>presentNetValueBase</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForeignExchangeForwardNetPresentValueTerm' type='QuantLibAddin::ForeignExchangeForward'>
+      <description>Returns the net present value in term currency. Requires pricing engine to be set before calling.</description>
+      <libraryFunction>presentNetValueTerm</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForeignExchangeForwardGrossValueBase' type='QuantLibAddin::ForeignExchangeForward'>
+      <description>Returns the forward gross value in base currency. Requires pricing engine to be set before calling.</description>
+      <libraryFunction>forwardGrossValueBase</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForeignExchangeForwardGrossValueTerm' type='QuantLibAddin::ForeignExchangeForward'>
+      <description>Returns the forward gross value in term currency. Requires pricing engine to be set before calling.</description>
+      <libraryFunction>forwardGrossValueTerm</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
   </Functions>
 
 </Category>
